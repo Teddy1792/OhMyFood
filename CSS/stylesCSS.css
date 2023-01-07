@@ -93,7 +93,7 @@ button::after {
   color: white;
   font-size: 18px;
   opacity: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff96e1, #9f75d3);
   transition: all 0.3s ease;
 }
 button:hover::after {

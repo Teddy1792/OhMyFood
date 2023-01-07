@@ -1,0 +1,388 @@
+footer {
+  background-color: #323232;
+  color: white;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+footer .titleBrand {
+  font-family: "shrikhand";
+  padding-bottom: 18px;
+}
+footer .footerIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+footer .footerIcon i {
+  padding-right: 10px;
+  font-size: 14px;
+}
+footer .footerIcon i.fa-handshake-angle {
+  font-size: 11px;
+  padding-right: 8px;
+}
+footer .footerIcon .fa-handshake-angle {
+  font-size: 14px;
+}
+footer .footerItem {
+  padding-bottom: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 960px) {
+  footer {
+    background-color: #323232;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .titleBrand {
+    padding-bottom: 18px;
+  }
+  footer .footerIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  footer .footerIcon .fa-handshake-angle {
+    font-size: 14px;
+  }
+  footer .footerIcon i {
+    padding-right: 10px;
+    font-size: 14px;
+  }
+  footer .footerIcon i .fa-handshake-angle {
+    font-size: 11px;
+    padding-right: 8px;
+  }
+  footer .footerItem {
+    padding-bottom: 10px;
+  }
+}
+button {
+  padding: 20px;
+  border-radius: 50px;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all 0.3s;
+}
+button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.515);
+}
+button::after {
+  content: "Explorer nos restaurants";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  transition: all 0.3s ease;
+}
+button:hover::after {
+  opacity: 1;
+}
+
+* {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a {
+  color: white;
+}
+
+.titleBrand {
+  font-family: "shrikhand";
+}
+
+.presentation {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.presentation .logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.presentation .logo img {
+  padding-bottom: 15px;
+}
+.presentation img {
+  width: 25%;
+}
+.presentation h2 {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 40px;
+  margin-bottom: -8px;
+  font-size: 24px;
+  font-weight: 900;
+}
+.presentation .subtitle {
+  text-align: center;
+  font-weight: 100;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.presentation button {
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.presentation .localisation {
+  width: 100%;
+  background-color: #ebebeb;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.presentation .localisation i {
+  padding-left: -20px;
+  margin-right: 20px;
+}
+
+.loader_img {
+  position: absolute;
+  right: calc(50% - 139px);
+  top: calc(70% - 139px);
+  background-image: url("../restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 276px;
+  height: 276px;
+  border-radius: 50%;
+  z-index: 1;
+  animation: fade 3s linear;
+  animation-fill-mode: forwards;
+}
+
+.loader_smallCircle {
+  position: absolute;
+  background-color: #f3f3f3;
+  height: 151px;
+  width: 151px;
+  border-radius: 50%;
+  right: calc(50% - 75.5px);
+  top: calc(50% - 75.5px);
+}
+
+.loader {
+  position: absolute;
+  right: calc(50% - 139px);
+  top: calc(50% - 139px);
+  border: 64px solid #f3f3f3;
+  border-top: 64px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 3s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fonctionnement {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement .steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+.fonctionnement .steps .step {
+  position: relative;
+  background-color: #f7f7f7;
+  width: 85%;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.fonctionnement .steps .step i {
+  color: #f7f7f7;
+  padding-right: 25px;
+}
+.fonctionnement .steps .step .number {
+  position: absolute;
+  top: 24px;
+  left: -10px;
+  padding-top: 2px;
+  color: white;
+  font-weight: 400;
+  font-size: 13px;
+  background-color: #9356DC;
+  text-align: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 22px;
+}
+.fonctionnement .steps .step:nth-child(3) {
+  background-color: #f5eeff;
+}
+.fonctionnement .steps .step:nth-child(3) i {
+  color: #9356DC;
+}
+
+nav {
+  background-color: #f7f7f7;
+  margin-top: 60px;
+  padding-top: 0px;
+}
+nav h2 {
+  margin: 20px;
+  padding-top: 40px;
+}
+nav .restaurantCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 20px;
+  overflow: hidden;
+}
+nav .restaurantCard img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+nav .restaurantCard .cardLike {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav .restaurantCard .cardLike h3 {
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 15px;
+  margin-bottom: 0px;
+  position: relative;
+}
+nav .restaurantCard .cardLike p {
+  font-weight: 200;
+  padding-left: 15px;
+  margin-top: 0px;
+}
+nav .restaurantCard .cardLike .fa-regular {
+  position: absolute;
+  bottom: 28px;
+  right: 25px;
+  font-size: 25px;
+}
+nav .restaurantCard .cardLike .fa-solid {
+  opacity: 0;
+  color: #9356DC;
+  position: absolute;
+  bottom: 28px;
+  right: 25px;
+  font-size: 25px;
+  transition: opacity 0.3s;
+}
+nav .restaurantCard .cardLike .fa-regular:hover {
+  opacity: 0;
+}
+nav .restaurantCard .cardLike .fa-solid:hover {
+  opacity: 1;
+  position: absolute;
+  bottom: 28px;
+  right: 25px;
+  font-size: 25px;
+}
+nav .restaurantCard .cardLike .fa-solid:hover {
+  opacity: 1;
+}
+nav .restaurantCard .sticker {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  background-color: #9ae3d1;
+  color: #0f9171;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+}
+
+@media (min-width: 960px) {
+  body {
+    background-color: #ebebeb;
+  }
+  .bodyColor {
+    width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+  }
+  nav h2 {
+    display: flex;
+    justify-content: center;
+  }
+  nav .testWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .testWrap .restaurantCard .cardLike {
+    width: 410px;
+  }
+}
+
+/*# sourceMappingURL=stylesCSS.css.map */

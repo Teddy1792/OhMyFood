@@ -206,8 +206,6 @@ article h2 {
   font-size: 20px;
   text-transform: uppercase;
   margin-top: 35px;
-}
-article h2 .borderBottom {
   border-bottom: solid 3px #99e2d0;
   width: 50px;
 }

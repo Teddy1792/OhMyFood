@@ -175,6 +175,17 @@ footer a {
   margin-right: 20px;
 }
 
+.loader_zIndex {
+  position: absolute;
+  right: calc(50% - 139px);
+  top: calc(70% - 139px);
+  width: 276px;
+  height: 276px;
+  animation: fadeBack 3s linear;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
 .loader_img {
   position: absolute;
   right: calc(50% - 139px);
@@ -185,7 +196,6 @@ footer a {
   width: 276px;
   height: 276px;
   border-radius: 50%;
-  z-index: 1;
   animation: fade 3s linear;
   animation-fill-mode: forwards;
 }
@@ -231,6 +241,17 @@ footer a {
     opacity: 0;
   }
 }
+@keyframes fadeBack {
+  0% {
+    z-index: 1;
+  }
+  99% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 0;
+  }
+}
 .fonctionnement {
   margin: 20px;
   display: flex;
@@ -252,8 +273,14 @@ footer a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
+.fonctionnement .steps .step:hover {
+  background-color: #f5eeff;
+}
+.fonctionnement .steps .step:hover i {
+  color: #9356DC;
+}
 .fonctionnement .steps .step i {
-  color: #f7f7f7;
+  color: #636262;
   padding-right: 25px;
 }
 .fonctionnement .steps .step .number {
@@ -269,12 +296,6 @@ footer a {
   border-radius: 50%;
   height: 20px;
   width: 22px;
-}
-.fonctionnement .steps .step:nth-child(3) {
-  background-color: #f5eeff;
-}
-.fonctionnement .steps .step:nth-child(3) i {
-  color: #9356DC;
 }
 
 nav {
@@ -366,7 +387,6 @@ nav .restaurantCard .sticker {
     background-color: #ebebeb;
   }
   .bodyColor {
-    width: 960px;
     margin: 0 auto;
     background-color: white;
     position: relative;
@@ -379,6 +399,8 @@ nav .restaurantCard .sticker {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
   }
   nav .testWrap .restaurantCard .cardLike {
     width: 410px;

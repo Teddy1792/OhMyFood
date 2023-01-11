@@ -85,6 +85,17 @@ footer a{
     }
 }
 
+.loader_zIndex{
+    position: absolute;
+    right: calc(50% - 139px);
+    top: calc(70% - 139px);
+    width: 276px;
+    height: 276px;
+    animation: fadeBack 3s linear;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
 .loader_img{
     position: absolute;
     right: calc(50% - 139px);
@@ -95,7 +106,6 @@ footer a{
     width: 276px;
     height: 276px;
     border-radius: 50%;
-    z-index: 1;
     animation: fade 3s linear;
     animation-fill-mode: forwards;
 }
@@ -144,6 +154,18 @@ footer a{
       }
      }
 
+  @keyframes fadeBack {
+    0% {
+        z-index: 1;
+    }
+    99% {
+        z-index: 1;
+        }
+    100% {
+        z-index: 0;
+      }
+     }
+
 .fonctionnement{
     margin: 20px;
     display: flex;
@@ -153,9 +175,10 @@ footer a{
         flex-direction: column;
         align-items: center;
         font-weight: bold;
+        
         .step{
             position: relative;
-            background-color: $darkGrey;
+            background-color: #f7f7f7;
             width: 85%;
             margin: 10px;
             padding: 25px;
@@ -163,8 +186,15 @@ footer a{
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
 
+            &:hover{
+                background-color: #f5eeff;
+                i{
+                    color: $gradientPurple;
+                }
+            }
+
             i{
-                color: $darkGrey;
+                color: $darkerGrey;
                 padding-right: 25px;
             }
 
@@ -181,13 +211,6 @@ footer a{
                 border-radius: 50%;
                 height: 20px;
                 width: 22px;
-            }
-        }
-
-        .step:nth-child(3){
-            background-color: #f5eeff;
-            i{
-                color: $gradientPurple;
             }
         }
     }
@@ -296,7 +319,6 @@ nav{
     }
 
     .bodyColor{
-        width:960px;
         margin:0 auto;
         background-color: white;
         position: relative;
@@ -312,6 +334,8 @@ nav{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            margin-left: 100px;
+            margin-right: 100px;
 
             .restaurantCard{
                 .cardLike{
